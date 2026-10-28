@@ -25,10 +25,10 @@
     .lang button+button:before{content:"/";padding-right:8px;color:#a1a6a8}
     .lang button[aria-pressed="true"]{color:var(--ink);font-weight:700}
     h1,h2,h3,p{margin-top:0}
-    .hero{padding:84px 0 82px}
-    h1{font-size:clamp(3.1rem,6.4vw,5.8rem);font-weight:700;line-height:1.05;letter-spacing:-.06em;margin:0 0 22px}
+    .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.8fr);gap:5%;align-items:end;padding:84px 0 82px}
+    h1{font-size:clamp(3.1rem,6.4vw,5.8rem);font-weight:700;line-height:1.05;letter-spacing:-.06em;margin:0}
     .sublead{color:var(--muted);font-size:1.05rem;margin:0 0 28px}
-    .sublead[data-lang="en"]{white-space:nowrap}
+    .affiliation-line{display:block;white-space:nowrap}
     .hero-links{display:flex;flex-wrap:wrap;gap:12px 30px}
     .pill{border:0;border-radius:0;padding:0;background:none;font-size:.88rem;font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
     .pill.primary{background:none;color:var(--ink)}
@@ -68,11 +68,10 @@
       .wrap{width:min(100% - 36px,560px)}
       .top .wrap{min-height:62px}
       .nav{gap:14px}.nav a{display:none}.lang{margin-left:0}
-      .hero{padding:56px 0 62px}
+      .hero{grid-template-columns:1fr;gap:24px;padding:56px 0 62px}
       h1{font-size:clamp(2.8rem,13vw,4.3rem)}
       .sublead{font-size:.96rem;margin-bottom:24px}
-      .sublead[data-lang="en"]{white-space:normal}
-      .affiliation-line{display:block}
+      .affiliation-line{white-space:normal}
       section.content{padding:54px 0 62px}
       .section-head{margin-bottom:22px}
       .pub-intro{margin-bottom:30px}
@@ -89,7 +88,7 @@
 <body>
   <header class="top"><div class="wrap"><a class="brand" href="#top">Koyo Motoe</a><nav class="nav" aria-label="Main navigation"><a href="#publications" data-lang="en">Publications</a><a href="#publications" data-lang="ja">論文</a><a href="#experience" data-lang="en">Experience</a><a href="#experience" data-lang="ja">経歴</a><a href="#contact" data-lang="en">Contact</a><a href="#contact" data-lang="ja">連絡先</a><div class="lang" aria-label="Language"><button type="button" data-switch="en" aria-pressed="true">EN</button><button type="button" data-switch="ja" aria-pressed="false">JP</button></div></nav></div></header>
   <main id="top">
-    <div class="wrap hero"><h1><span data-lang="en">Koyo Motoe</span><span data-lang="ja">元永 航陽</span></h1><p class="sublead" data-lang="en"><span class="affiliation-line">Master's student,</span> <span class="affiliation-line">Frontier Media Science, Meiji University.</span></p><p class="sublead" data-lang="ja">明治大学大学院 先端数理科学研究科 先端メディアサイエンス専攻・修士1年</p><div class="hero-links"><a class="pill primary" href="#publications" data-lang="en">View publications ↓</a><a class="pill primary" href="#publications" data-lang="ja">論文を見る ↓</a></div></div>
+    <div class="wrap hero"><div><h1><span data-lang="en">Koyo Motoe</span><span data-lang="ja">元永 航陽</span></h1></div><div><p class="sublead" data-lang="en"><span class="affiliation-line">Master's student,</span><span class="affiliation-line">Frontier Media Science, Meiji University.</span></p><p class="sublead" data-lang="ja">明治大学大学院 先端数理科学研究科 先端メディアサイエンス専攻・修士1年</p><div class="hero-links"><a class="pill primary" href="#publications" data-lang="en">View publications ↓</a><a class="pill primary" href="#publications" data-lang="ja">論文を見る ↓</a></div></div></div>
     <section class="content" id="publications"><div class="wrap"><div class="section-head"><h2 data-lang="en">Publications</h2><h2 data-lang="ja">論文・研究発表</h2></div><div class="pub-intro"><div data-lang="en"><p>I study how people interact with interfaces on screens and in VR.</p><p>I design and implement VR selection interfaces, analyze behavior observed in experiments, and develop speed-based models to explain and predict interaction time.</p></div><div data-lang="ja"><p>画面やVR空間のインターフェースを使うとき、人がどのように操作するかを研究しています。</p><p>VR向けの選択インターフェースの設計・実装に加え、実験で得た操作行動を分析し、速度に着目したモデルで操作時間を説明・予測しています。</p></div></div><ol class="papers">
       <li class="paper"><div class="paper-meta"><strong data-lang="en">To appear</strong><strong data-lang="ja">掲載予定</strong>2026 · Journal article · PACM HCI (ISS track)</div><div><h3>Modeling Steering Times of Oblique 3D Paths</h3><p><strong>Koyo Motoe</strong>, Taiyu Homma, Nobuhito Kasahara, Shota Yamanaka, Wolfgang Stuerzlinger, Homei Miyashita</p><a href="https://doi.org/10.1145/3859328" target="_blank" rel="noopener noreferrer">DOI ↗</a></div></li>
       <li class="paper"><div class="paper-meta"><strong data-lang="en">To appear</strong><strong data-lang="ja">掲載予定</strong>2026 · Adjunct paper · UIST</div><div><h3>Sun Menu: An Outward Ray-Based Radial Menu for Accurate VR Selection</h3><p><strong>Koyo Motoe</strong>, Taiyu Homma, Homei Miyashita</p><a href="https://doi.org/10.1145/3830397.3841832" target="_blank" rel="noopener noreferrer">DOI ↗</a></div></li>
